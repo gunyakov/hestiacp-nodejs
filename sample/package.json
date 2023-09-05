@@ -1,0 +1,22 @@
+{
+	"name": "NodeJS Sample Server",
+	"version": "1.0.0",
+	"description": "Sample",
+	"main": "src/index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"serve": "npm run dev"
+	},
+	"keywords": [
+		"hestia",
+		"node",
+		"nodejs",
+		"proxy server",
+		"nginx"
+
+	],
+	"author": "Oleg Gunyakov",
+	"dependencies": {
+		"express": "^4.18.2"
+	}
+}
