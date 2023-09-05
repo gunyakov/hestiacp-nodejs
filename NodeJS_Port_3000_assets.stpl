@@ -26,7 +26,7 @@ server {
 	}
 
 	location / {
-		proxy_pass      http://unix:%home%/%user%/web/%domain%/nodeapp/app.sock:$request_uri;
+		proxy_pass http://127.0.0.1:3000;
 
         proxy_set_header X-Forwarded-Proto $scheme;
         proxy_set_header X-Real-IP $remote_addr;
@@ -46,10 +46,10 @@ server {
 		}
 	}
 
-	location /stats/ {
-		alias %home%/%user%/web/%domain%/stats
+	location /assets/ {
+		alias %home%/%user%/web/%domain%/public_html/assets
 	}
-	
+
 	location @fallback {
 		proxy_pass https://%ip%:%web_ssl_port%;
 	}

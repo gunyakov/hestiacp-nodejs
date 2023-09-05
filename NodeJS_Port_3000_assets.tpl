@@ -24,8 +24,8 @@ server {
 		}
 	}
 
-	location /stats/ {
-		alias %home%/%user%/web/%domain%/stats
+	location /assets/ {
+		alias %home%/%user%/web/%domain%/public_html/assets
 	}
 
 	location @fallback {

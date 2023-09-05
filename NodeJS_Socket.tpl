@@ -24,6 +24,10 @@ server {
 		}
 	}
 
+	location /stats/ {
+		alias %home%/%user%/web/%domain%/stats
+	}
+
 	location @fallback {
 		proxy_pass http://%ip%:%web_port%;
 	}
